@@ -1,0 +1,31 @@
+package com.myhome.mapper;
+
+import java.util.List;
+
+import org.apache.ibatis.annotations.Mapper;
+
+import com.myhome.dto.DefaultDto;
+import com.myhome.dto.MyboardDto;
+import com.myhome.dto.ReboardDto;
+
+@Mapper
+public interface MyMapper {
+
+	int insertMyboard(MyboardDto dto);
+
+	List<?> selectMyboardList(DefaultDto dto);
+
+	int selectMyboardTotal(DefaultDto defaultDto);
+
+	void updateMyboardHits(int seqid);
+
+	MyboardDto selectMyboardDetail(int seqid);
+
+	int insertReboard(ReboardDto reboardto);
+
+	List<?> selectReboardList(int seqid);
+
+	}
+
+
+
